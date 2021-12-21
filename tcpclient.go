@@ -217,6 +217,8 @@ func (mb *tcpTransporter) Connect() error {
 }
 
 func (mb *tcpTransporter) IsConnected() bool {
+	mb.mu.Lock()
+	defer mb.mu.Unlock()
 	if mb.conn != nil {
 		_, err := mb.conn.Write([]byte{0})
 		return err == nil
