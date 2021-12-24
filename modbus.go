@@ -5,7 +5,7 @@
 /*
 Package modbus provides a client for MODBUS TCP and RTU/ASCII.
 */
-package modbus
+package zhmodbus
 
 import (
 	"fmt"
